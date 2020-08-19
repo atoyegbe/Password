@@ -1,0 +1,29 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.container {
+    margin-top: 25vh;
+    background-color: black;
+}
+
+h1 {
+    font-family: 'Raleway Dots', cursive;
+    font-size: 40px;
+    color:greenyellow;
+}
+.wrapper {
+    margin: 20px 20px;
+}
+
+.password-wrapper {
+    margin: 0 auto;
+}
+
+.password {
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+    letter-spacing: 10px;
+}
