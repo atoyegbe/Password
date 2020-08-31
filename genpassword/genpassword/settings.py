@@ -1,4 +1,3 @@
-
 import environ
 import os
 from pathlib import Path
@@ -36,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'password',
+    'django_cryptography',
 ]
 
 MIDDLEWARE = [
@@ -67,7 +67,7 @@ TEMPLATES = [
         },
     },
 ]
-
+SIGNING_BACKEND = 'django_cryptography.core.signing.TimestampSigner'
 WSGI_APPLICATION = 'genpassword.wsgi.application'
 
 
