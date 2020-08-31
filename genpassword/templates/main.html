@@ -1,21 +1,27 @@
 {% extends 'base.html' %}
 {% block content %}
-
+{% if user.is_anonymous %}
 <h1>Random Password</h1>
 <div class="col-lg-12 wrapper">
-    <div class="password-wrapper col-md-6 text-center">
-        <div id="password" class="text-muted text-center password"> Password Generated</div>
+  <div class="password-wrapper col-md-6 text-center">
+    <div id="ff" class="text-muted text-center password">
+      Password Generated
     </div>
+  </div>
 </div>
-<button class="btn btn-success col-lg-6"> Generate </button>
+<button class="btn btn-success col-lg-6">Generate</button>
+<h4>Login to have your passwords saved</h4>
 
-
+{% endif %} 
 {% if user.is_authenticated %}
+<h1>Get your Password</h1>
 
+<div class="col-lg-12 wrapper">
+  <div class="password-wrapper col-md-6 text-center">
+    <div id="password"></div>
+  </div>
+</div>
+<button class="btn btn-success col-lg-6">Generate</button>
 
-{% else %}
-  <h4> Login to have your passwords saved</h4>
-
-{% endif %}
-
+{% endif %} 
 {% endblock %}
