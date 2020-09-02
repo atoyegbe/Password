@@ -10,37 +10,38 @@
   </div>
 </div>
 <button class="btn btn-success col-lg-6" id="generate">Generate</button>
+<br>
 <h4>Login to have your passwords saved</h4>
 
 {% endif %} 
 {% if user.is_authenticated %}
-<h1>Get your Password</h1>
+<h1>Generate Password</h1>
 
 <form action="" method="POST" id="form_id">
   {% csrf_token %}
   <div class="form-group">
-    <label>Name</label>
+    <label class="label">Name</label>
     <input
       type="text"
       class="form-control"
       name="passwordname"
       id="passwordname"
-      placeholder=""
+      placeholder="name your password"
     />
   </div>
   <div class="form-group">
-    <label>Password</label>
+    <label class="label">Password</label>
     <input
       class="form-control"
       type="text"
       name="passwordsafe"
       id="passwordsafe"
-      placeholder=""
+      placeholder="type in a password OR Generate one"
     />
   </div>
   <button type="submit"  class="btn btn-primary">Submit</button>
-</form>
 <button id="generate" class="btn btn-success">Generate</button>
+</form>
 
 
 
