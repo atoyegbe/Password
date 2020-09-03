@@ -1,6 +1,7 @@
 import environ
 import os
 from pathlib import Path
+import django_heroku
 
 root = environ.Path(__file__) - 3  # get root of the project
 env = environ.Env( DEBUG=(bool, False))
@@ -116,9 +117,12 @@ USE_TZ = True
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
+django_heroku.settings(locals())

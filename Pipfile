@@ -10,6 +10,9 @@ django = "*"
 django-environ = "*"
 psycopg2 = "*"
 django-cryptography = "*"
+coverage = "*"
+gunicorn = "*"
+django-heroku = "*"
 
 [requires]
 python_version = "3.8"
