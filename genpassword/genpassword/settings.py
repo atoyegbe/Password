@@ -23,7 +23,7 @@ SECRET_KEY = env('SECRET_KEY')
 # Parse database connection url strings like psql://user:pass@127.0.0.1:8458/db
 
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['passwordsafe.herokuapp.com', '127.0.0.1','localhost',]
 
 
 # Application definition
